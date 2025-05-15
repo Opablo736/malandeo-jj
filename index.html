@@ -1,0 +1,128 @@
+
+
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Controle de Compras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0cd8c;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 1000px;
+    }
+
+    input, button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: rgb(14, 86, 153);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #052f45;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #e9ecef;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .atrasado {
+      color: red;
+    }
+
+    .pago {
+      color: rgb(7, 69, 7);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: black;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 32px;
+      margin: 0;
+    
+    }
+    text{
+      width: 70vw;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="/WhatsApp Image 2025-05-13 at 08.33.54.jpeg" alt="Logo" />
+    <h1>Controle de Compras e Débitos. Faz o pix malandro.</h1>
+  </header>
+
+  <div class="container">
+    <form id="purchaseForm">
+      <label for="nome">Nome do Cliente:</label>
+      <input type="text" id="nome" required />
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" placeholder="(99) 99999-9999" />
+
+      <label for="produto">Produto:</label>
+      <input type="text" id="produto" required />
+
+      <label for="valor">Valor (R$):</label>
+      <input type="text" id="valor" required />
+
+      <label for="data">Data da Compra:</label>
+      <input type="date" id="data" required />
+
+      <button type="submit">Registrar Compra</button>
+    </form>
+
+    <h2>Clientes e Débitos</h2>
+    <input type="text" id="pesquisa" placeholder="Pesquisar por nome" />
+    <button id="btnPesquisar">Buscar</button>
+    <ul id="listaClientes"></ul>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
